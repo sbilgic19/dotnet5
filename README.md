@@ -1,2 +1,2 @@
-*** .NET BookStore Project
+## .NET BookStore Project
 
