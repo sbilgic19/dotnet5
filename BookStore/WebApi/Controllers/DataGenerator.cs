@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 // Initial data için DataGenerator yazılır
 namespace WebApi.DBOperations
 {
-    // Başlangıçta hazır datalarla başlamakiçin oluşturulur.
+    // Başlangıçta hazır datalarla başlamak için oluşturulur.
     public class DataGenerator
     {
         // IServiceProvider -> Program.cs içerisindeki yapı aracılığıyla her çalıştığında bunu çalıştıracak.
