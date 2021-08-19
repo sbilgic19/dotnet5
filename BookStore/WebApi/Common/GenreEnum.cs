@@ -1,3 +1,4 @@
+// Foreign Key instead of GenreEnum
 namespace WebApi.Common
 {
     public enum GenreEnum

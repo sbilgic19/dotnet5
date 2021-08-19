@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using WebApi.Entities;
 // Initial data için DataGenerator yazılır
 namespace WebApi.DBOperations
 {
@@ -19,6 +20,20 @@ namespace WebApi.DBOperations
                     return;
                 // dbde data yoksa default datayla başlat
                 }else{
+                    context.Genres.AddRange(
+                        new Genre{
+                            Name = "PersonalGrowth",
+
+                        },
+                        new Genre{
+                            Name = "SciFi",
+                            
+                        },
+                        new Genre{
+                            Name = "Novel",
+                            
+                        }
+                    );
                     // Book'a liste eklemek için AddRange
                     context.Books.AddRange(
                         new Book{

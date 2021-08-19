@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using WebApi.Entities;
 // DB operasyonları için kullanılacak dbcontext
 namespace WebApi.DBOperations{
 
@@ -12,6 +13,7 @@ namespace WebApi.DBOperations{
         // BookController Book entity 
         // entity isimleri tekil, dbde oluşturulan isimler çoğul 
         public DbSet<Book> Books {get; set;}
+        public DbSet<Genre> Genres {get; set;}
 
         
 

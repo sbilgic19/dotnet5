@@ -34,7 +34,7 @@ namespace WebApi
         // Uygulama içerisinde kullanılacak servislerin inject edildiği yer
 
         // Dependencyler burada veriliyor
-        public void ConfigureServices(IServiceCollection services)
+        public void ConfigureServices(IServiceCollection services) // IServiceCollection services container nesnesidir
         {
 
             services.AddControllers();
