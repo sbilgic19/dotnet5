@@ -20,6 +20,24 @@ namespace WebApi.DBOperations
                     return;
                 // dbde data yoksa default datayla başlat
                 }else{
+                    context.Authors.AddRange(
+                        new Author{
+                            Name = "İsim Test 1",
+                            Surname = "Soyisim Test 1",
+                            Birthdate = new DateTime(2001, 06,12)
+                        },
+                        new Author{
+                            Name = "İsim Test 2",
+                            Surname = "Soyisim Test 2",
+                            Birthdate = new DateTime(2002, 06,12)
+                        },
+                        new Author{
+                            Name = "İsim Test 3",
+                            Surname = "Soyisim Test 3",
+                            Birthdate = new DateTime(2003, 06,12)
+                        }
+
+                    );
                     context.Genres.AddRange(
                         new Genre{
                             Name = "PersonalGrowth",
@@ -39,6 +57,7 @@ namespace WebApi.DBOperations
                         new Book{
                             //Id = 1, autogenerator yapıldı
                             Title = "Lean StartUp",
+                            AuthorId = 1,
                             GenreId = 1, // Personal Development
                             PageCount = 200,
                             PublishDate = new DateTime(2001, 06,12)
@@ -47,6 +66,7 @@ namespace WebApi.DBOperations
                             //Id = 2,
                             Title = "Herland",
                             GenreId = 2, // Sci-fi
+                            AuthorId = 2,
                             PageCount = 250,
                             PublishDate = new DateTime(2010, 05,23)
                         },
@@ -54,6 +74,7 @@ namespace WebApi.DBOperations
                             // Id = 3,
                             Title = "Dune",
                             GenreId = 2, // Sci-fi
+                            AuthorId = 3,
                             PageCount = 540,
                             PublishDate = new DateTime(2001, 12,21)
                         }

@@ -27,6 +27,7 @@ namespace WebApi.BookOperations.UpdateBook
                 throw new InvalidOperationException("Güncellenecek kitap bulunamadı");
             }else{
                 book.GenreId = Model.GenreId != default ? Model.GenreId : book.GenreId;
+                book.AuthorId = Model.AuthorId != default ? Model.AuthorId : book.AuthorId;
                 book.Title = Model.Title != default ? Model.Title : book.Title;
 
                 _dbContext.SaveChanges();
@@ -39,6 +40,7 @@ namespace WebApi.BookOperations.UpdateBook
     {
         public string Title { get; set; }
         public int GenreId { get; set; }
+        public int AuthorId { get; set;}
 
     }
 
