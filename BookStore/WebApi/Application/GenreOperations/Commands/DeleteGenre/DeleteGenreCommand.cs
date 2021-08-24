@@ -1,7 +1,5 @@
 using System;
 using System.Linq;
-using System;
-using System.Linq;
 using WebApi.DBOperations;
 using WebApi.Entities;
 
@@ -10,9 +8,9 @@ namespace WebApi.Application.GenreOperations.DeleteGenre
     public class DeleteGenreCommand
     {
         public int GenreId { get; set; }
-        private readonly BookStoreDBContext _context;
+        private readonly IBookStoreDBContext _context;
 
-        public DeleteGenreCommand(BookStoreDBContext context)
+        public DeleteGenreCommand(IBookStoreDBContext context)
         {
             _context = context;
         }

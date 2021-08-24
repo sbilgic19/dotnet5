@@ -44,6 +44,7 @@ namespace WebApi
             });
             // db bizim için bir servis o yüzden burada tanıtılması gerekiyor.
             services.AddDbContext<BookStoreDBContext>(options => options.UseInMemoryDatabase(databaseName:"BookStoreDB")) ;
+            services.AddScoped<IBookStoreDBContext>(provider => provider.GetService<BookStoreDBContext>()); // Request lifetime, response dönene kadar
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddSingleton<ILoggerService, ConsoleLogger>();
         }

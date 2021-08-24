@@ -1,7 +1,5 @@
 using System;
 using System.Linq;
-using System;
-using System.Linq;
 using WebApi.DBOperations;
 using WebApi.Entities;
 
@@ -10,9 +8,9 @@ namespace WebApi.Application.AuthorOperations.DeleteAuthor
     public class DeleteAuthorCommand
     {
         public int AuthorId { get; set; }
-        private readonly BookStoreDBContext _context;
+        private readonly IBookStoreDBContext _context;
 
-        public DeleteAuthorCommand(BookStoreDBContext context)
+        public DeleteAuthorCommand(IBookStoreDBContext context)
         {
             _context = context;
         }

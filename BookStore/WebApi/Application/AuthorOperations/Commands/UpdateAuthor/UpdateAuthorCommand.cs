@@ -10,9 +10,9 @@ namespace WebApi.Application.AuthorOperations.UpdateAuthor
         public int AuthorId { get; set; }
 
         public UpdateAuthorModel Model { get; set; }
-        private readonly BookStoreDBContext _context;
+        private readonly IBookStoreDBContext _context;
 
-        public UpdateAuthorCommand(BookStoreDBContext context)
+        public UpdateAuthorCommand(IBookStoreDBContext context)
         {
             _context = context;
         }

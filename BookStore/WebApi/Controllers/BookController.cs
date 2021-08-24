@@ -17,9 +17,9 @@ namespace WebApi.Controllers
     {
         // Uygulama içerisinde değiştirilmesi istenmiyor. Constructurda set edilip öyle kalıyor
 
-        private readonly BookStoreDBContext _context;
+        private readonly IBookStoreDBContext _context;
         private readonly IMapper _mapper;
-        public BookController(BookStoreDBContext context, IMapper mapper)
+        public BookController(IBookStoreDBContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
